@@ -1,7 +1,72 @@
+/*Perusasetukset*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    margin: 24px;
+    margin: 15px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
     background-color: rgb(219, 214, 235);
     color: #353434;
+}
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 35px;
+    background-color: rgb(151, 99, 185);
+}
+
+.logo {
+    color:rgb(48, 3, 75);
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav a {
+    align-items: center;
+    color: rgb(99, 12, 94);
+    text-decoration: none;
+}
+
+/*MAIN*/
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+
+
+
+
+
+
+
+/*Footer*/
+
+.footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.footer ul {
+    list-style-type:square;
 }
