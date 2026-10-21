@@ -48,7 +48,7 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
     min-height: 100vh;
     /*Yhdessä 1fr:n kanssa pitää footerin alhaalla, vaikka sisältöä vähän*/
     gap: 15px;
-    max-width: 1500px;
+    max-width: auto;
     margin: 0 auto;
     /*keskittää layoutin vaakasuunnassa*/
     padding: 0px;
