@@ -9,47 +9,57 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="index.html" class="logo">@Belejä</a>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="pelit.html">Pelit</a></li>
-                <li><a href="tuotteet.html">Kahvilan tuotteet</a></li>
-                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo">@Belejä</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="pelit.html">Pelit</a></li>
+                    <li><a href="tuotteet.html">Kahvilan tuotteet</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main class="container">
-        <h1>Kahvilan tuotteet ja niiden hinnastoa</h1>
-        <section>
-            <h2>Kahvilan herkut</h2>
+        <main class="main">
+            <article class="intro">
+                <h1>Kahvilan tuotteet ja niiden hinnastoa</h1>
+                <p>Alta löydät kahvilan herkullisen tuotevalikoiman.</p><br>
+            </article>
+            <div class="cards">
+                <section class="card">
+                    <h2>Kahvilan herkut</h2>
+                    <ul>
+                        <li>Porkkanakakku</li>
+                        <li>Mokkapala</li>
+                    </ul>
+                </section>
+                <section class="card">
+                    <h2>Kahvilan juomatarjonta</h2>
+                    <ul>
+                        <li>Latte</li>
+                        <li>Redbull</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <aside class="aside">
+            <h3>Aukioloajat</h3> <!--vähä vaiheessa vielä laitetaanko ees tänne ja miten hienosti-->
             <ul>
-                <li>Porkkanakakku</li>
-                <li>Mokkapala</li>
+                <li>Maanantaisin: Suljettu</li>
+                <li>Tiistaista-Perjantaihin: 12.00-22.00</li>
+                <li>Lauantaisin: 10.00-00.00</li>
+                <li>Sunnuntaisin: Suljettu</li><br>
             </ul>
-        </section>
-        <section>
-            <h2>Kahvilan juomatarjonta</h2>
-            <ul>
-                <li>Latte</li>
-                <li>Redbull</li>
-            </ul>
-        </section>
-    </main>
-    <aside class="aside">
-        <h3>Aukioloajat</h3> <!--vähä vaiheessa vielä laitetaanko ees tänne ja miten hienosti-->
-        <ul>
-            <li>Maanantaisin: Suljettu</li>
-            <li>Tiistaista-Perjantaihin: 12.00-22.00</li>
-            <li>Lauantaisin: 10.00-00.00</li>
-            <li>Sunnuntaisin: Suljettu</li>
-        </ul>
-    </aside>
-    <footer class="footer">
-        <p>&copy; Henna Linnala 2026
-    </footer>
+            <h3>Yhteystiedot</h3>
+            <p>Sähköpostitse: kahvila@belejä.fi <br>
+                Puhelimitse: 040555555555</p>
+        </aside>
+        <footer class="footer">
+            <p>&copy; Henna Linnala 2026
+        </footer>
+    </div>
 </body>
 
 </html>
