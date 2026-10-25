@@ -27,12 +27,50 @@
             <article class="card-info">
                 <h2>Saat otettua meihin yhteyttä</h2>
                 <ul>
-                    <li>Sähköpostitse: kahvila@belejä.fi</li>
-                    <li>Puhelimitse: 040555555555</li>
+                    <li>Sähköpostitse: <b>kahvila@belejä.fi</b></li>
+                    <li>Puhelimitse: <b>040555555555</b></li>
                 </ul>
-                <br><p>Vastaamme puheluihin aukioloaikojen puitteissa. Tähän tai alle ehkä tulee myös yhteystietolomake</p>
+                <br>
+                <p>Vastaamme puheluihin aukioloaikojen puitteissa.</p>
             </article>
-
+            <section>
+                <h2>Yhteydenottolomake</h2>
+                <p>Tällä lomakkeella voit myös ottaa meihin. Lomakkeeseen voi kirjoittaa toiveita, kehitysehdotuksia, kysymyksiä tai muita terveisiä meille. <br>
+                    Tähdellä (*) merkityt kentät ovat pakollisia.</p>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Yhteystiedot</legend>
+                        <div class="kentta">
+                            <label for="nimi">Nimi<span class="pakollinen">*</span></label>
+                            <input type="text" id="nimi" name="nimi" placeholder="Etunimi"
+                                autocomplete="name" maxlength="100" required>
+                        </div>
+                        <div class="kentta">
+                            <label for="sahkoposti">Sähköposti<span class="pakollinen">*</span></label>
+                            <input type="email" id="sahkoposti" name="sahkoposti"
+                                placeholder="etunimi.sukunimi@domain.com" autocomplete="email" maxlength="100" required>
+                        </div>
+                        <div class="kentta">
+                            <label for="puh">Puhelinumero</label>
+                            <input type="tel" id="puh" name="puh" placeholder="+35840123456" autocomplete="puh">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Viesti</legend>
+                            <div class="kentta">
+                            <label for="aihe">Aihe</label>
+                            <input type="aihe" id="aihe" name="aihe"
+                                placeholder="Viestisi aihe" autocomplete="aihe" maxlength="100">
+                        </div>   
+                        <div class="kentta">
+                            <label for="viesti">Voit kirjoittaa tähän kysymyksesi, toiveesi, ehdotuksesi</label>
+                            <textarea name="viesti" id="viesti" rows="4"
+                                placeholder="Kirjoita viestisi tähän"></textarea>
+                    </fieldset>
+                    <div class="painikkeet">
+                        <button type="submit">Lähetä</button>
+                        <button type="reset" class="tyhjenna">Tyhjennä</button>
+            </section>
         </main>
         <aside class="aside">
             <h3>Aukioloajat</h3> <!--vähä vaiheessa vielä laitetaanko ees tänne ja miten hienosti-->
