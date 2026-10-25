@@ -34,7 +34,7 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
 *************************************/
 
 .container {
-    display: grid;
+    display: grid;  /*Pääasiallinen layout-ratkaisu, kivasti järjestää kaikki paikoilleen ja reagoi liikutteluun*/
     grid-template-columns: 20% 1fr;
     /*Nimetyt alueet*/
     grid-template-areas:
@@ -164,13 +164,13 @@ MAIN (kaikilla sivuilla)
     SIDEBAR (kaikilla sivuilla)
 ********************************/
 
-.aside {
+.aside {        
     grid-area: sidebar;
     margin: 10px;
     padding: 20px;
     border: none;
     border-radius: 10px;
-    width: 240px;
+    width: 240px;   /*MITEN SAA TOIMIMAAN SILLEE, ETTÄ TEKSTI KASAUTUU MUKANA? Tämä nyt aiheuttaa sen, että jää siihen kaiken päälle, kun kutistaa*/
     height: 350px;
     background-color: rgb(211, 192, 245);
     text-align: center;
@@ -200,7 +200,9 @@ MAIN (kaikilla sivuilla)
     text-align: center;
 }
 
-/**Pieniä eroavaisuuksia haluttu yhteystietosivulle niin luotu oma luokka**/
+/*********************************************************************
+Pieniä eroavaisuuksia haluttu yhteystietosivulle niin luotu oma luokka
+**********************************************************************/
 .card-info {
     margin: auto;
     padding: 30px;
@@ -216,7 +218,9 @@ MAIN (kaikilla sivuilla)
     list-style: none;
 }
 
-/*Tuotteet ja pelit sivuille voisi tietty vähän kuviakin lisätä*/
+/*********************************************************************
+KUVAT Tuotteet ja pelit sivuille voisi tietty vähän kuviakin lisätä
+***********************************************************************/
 .cards-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
