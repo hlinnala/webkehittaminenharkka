@@ -39,7 +39,6 @@
                     Tähdellä (*) merkityt kentät ovat pakollisia.</p>
                 <form action="#" method="post">
                     <fieldset>
-                        <legend>Yhteystiedot</legend>
                         <div class="kentta">
                             <label for="nimi">Nimi<span class="pakollinen">*</span></label>
                             <input type="text" id="nimi" name="nimi" placeholder="Etunimi"
@@ -56,11 +55,15 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <legend>Viesti</legend>
                             <div class="kentta">
                             <label for="aihe">Aihe</label>
-                            <input type="aihe" id="aihe" name="aihe"
-                                placeholder="Viestisi aihe" autocomplete="aihe" maxlength="100">
+                           <select name="aihe" id="aihe">
+                            <option value="#">Valitse aiheesi</option>
+                            <option value="toive">Toiveita</option>
+                            <option value="kehitysehdotuksia">Kehitysehdotuksia</option>
+                            <option value="kysymyksia">Kysyttävää</option>
+                            <option value="muu">Jokin muu aihe</option>
+                           </select>
                         </div>   
                         <div class="kentta">
                             <label for="viesti">Voit kirjoittaa tähän kysymyksesi, toiveesi, ehdotuksesi</label>

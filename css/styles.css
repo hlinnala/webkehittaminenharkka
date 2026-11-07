@@ -35,7 +35,7 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
 
 .container {
     display: grid;  /*Pääasiallinen layout-ratkaisu, kivasti järjestää kaikki paikoilleen ja reagoi liikutteluun*/
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: minmax(0,1fr)minmax(0,3fr);
     /*Nimetyt alueet*/
     grid-template-areas:
         "header header"
@@ -48,7 +48,6 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
     min-height: 100vh;
     /*Yhdessä 1fr:n kanssa pitää footerin alhaalla, vaikka sisältöä vähän*/
     gap: 15px;
-    max-width: auto;
     margin: 0 auto;
     /*keskittää layoutin vaakasuunnassa*/
     padding: 0px;
@@ -170,8 +169,10 @@ MAIN (kaikilla sivuilla)
     padding: 20px;
     border: none;
     border-radius: 10px;
-    width: 240px;   /*MITEN SAA TOIMIMAAN SILLEE, ETTÄ TEKSTI KASAUTUU MUKANA? Tämä nyt aiheuttaa sen, että jää siihen kaiken päälle, kun kutistaa*/
-    height: 350px;
+    width: auto;   /*MITEN SAA TOIMIMAAN SILLEE, ETTÄ TEKSTI KASAUTUU MUKANA? Tämä nyt aiheuttaa sen, että jää siihen kaiken päälle, kun kutistaa*/
+    min-width: 0;
+    height: auto;
+    overflow-wrap: anywhere;
     background-color: rgb(211, 192, 245);
     text-align: center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.50)
@@ -183,6 +184,7 @@ MAIN (kaikilla sivuilla)
 
 .aside ul {
     list-style: none;
+    padding-left: 20px;
 }
 
 
@@ -200,6 +202,22 @@ MAIN (kaikilla sivuilla)
     text-align: center;
 }
 
+/*****************
+AUDIO etusivulla 
+******************/
+.audio {
+    position: absolute; /*ajattelin että tämä voisi olla jossain tietyssä kohtaa vähän ylempänä, joko navin alapuolella tai kuvan vieressä*/
+    top: 8rem;
+    right: 50px ;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+audio::-webkit-media-controls-play-button, 
+audio::-webkit-media-controls-panel {
+  background-color:  rgb(211, 192, 245);
+  color: #353434;
+}
+
 /*********************************************************************
 Pieniä eroavaisuuksia haluttu yhteystietosivulle niin luotu oma luokka
 **********************************************************************/
@@ -208,7 +226,7 @@ Pieniä eroavaisuuksia haluttu yhteystietosivulle niin luotu oma luokka
     padding: 30px;
     border: 1px solid rgb(48, 3, 75);
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     background-color: rgb(190, 174, 219);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.50);
     line-height: 1.75;
@@ -231,14 +249,15 @@ KUVAT Tuotteet ja pelit sivuille voisi tietty vähän kuviakin lisätä
     margin: auto;
     border: 1px solid rgb(48, 3, 75);
     border-radius: 2px;
-    padding: 15px 25px;
-    margin-bottom: 15px;
     background-color: rgb(190, 174, 219);
     box-shadow: 0 3px 8px rgba(112, 81, 119, 0.5);
-    text-align: center;
-    height: 220px;
+    height: 250px;
 }
-
+.card-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
 /**************************
 TAULUKOT tuotteet
 ***************************/
@@ -293,9 +312,17 @@ form {
 }
 
 fieldset {
-    border: 1px solid rgb(48, 3, 75);
-    border-radius: 6px;
+    border: none;
     padding: 16px;
+}
+
+input,
+textarea,
+select {
+   padding: 6px 6px;
+   border: 1px solid rgb(48, 3, 75);
+   border-radius: 3px;
+   font-size: 15px;
 }
 
 .kentta {
@@ -355,4 +382,25 @@ button:hover {
 .tyhjenna:hover {
     background-color: blueviolet;
     color: white;
+}
+
+/********************************
+Responsiivisuus asetukset
+*********************************/
+@media (max-width: 900px){
+  .cards{
+   grid-template-columns: repeat(2, 1fr); 
+  }
+  .cards-img{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px){
+  .cards{
+   grid-template-columns: 1fr; 
+  }
+  .cards-img{
+    grid-template-columns: 1fr;
+  }
 }
