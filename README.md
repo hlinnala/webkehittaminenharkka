@@ -19,3 +19,4 @@ En halunnut käyttää generatiivista tekoälyä luomaan kuvia
 * monopoly: Pixabay (https://pixabay.com/fi/photos/monopoli-kanadalainen-peli-pelaa-2636268/)
 * playstation: Pixabay (https://pixabay.com/fi/photos/peli-asema-konsoli-pelata-joystick-6689793/)
 * pelisivulleääni: Pixabay (https://pixabay.com/fi/sound-effects/elokuva-ja-erikoistehosteet-90s-game-ui-11-185104/)
+* favicon: luotu (https://svg.gock.net/#text=🎮&size=114&y=60&background=1&backgroundColour=%23dbd6eb&v=1)
