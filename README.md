@@ -16,4 +16,6 @@ En halunnut käyttää generatiivista tekoälyä luomaan kuvia
 * kakkutikkari: Pixabay (https://pixabay.com/fi/photos/kakkutikkarit-leivonnaiset-ruokaa-693645/)
 * latte: Pixabay (https://pixabay.com/fi/photos/kofeiini-kahvia-kuppi-kahvikuppi-1866758/)
 * mario: Pixabay (https://pixabay.com/fi/photos/nintendo-vaihtaa-nintendo-vaihtaa-2154437/)
+* monopoly: Pixabay (https://pixabay.com/fi/photos/monopoli-kanadalainen-peli-pelaa-2636268/)
+* playstation: Pixabay (https://pixabay.com/fi/photos/peli-asema-konsoli-pelata-joystick-6689793/)
 * pelisivulleääni: Pixabay (https://pixabay.com/fi/sound-effects/elokuva-ja-erikoistehosteet-90s-game-ui-11-185104/)
