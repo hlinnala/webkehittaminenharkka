@@ -80,28 +80,33 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
     grid-area: nav;
 }
 
-.nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
+.nav-main a:hover,
+.nav-main a:focus-visible {
+    color: blueviolet;
+}
+
+.nav-main{ 
+    display: flex; 
+    gap: 25px; 
+    justify-content: space-between;
     font-weight: bold;
     font-size: 20px;
 }
 
-.nav a {
-    align-items: center;
-    color: rgb(214, 198, 223);
-    ;
-    /* rgb(99, 12, 94);*/
+.nav-main a { 
+    padding: 5px 0; 
     text-decoration: none;
+    align-items:center;
+    color: rgb(214, 198, 223);
+}
+/*Piilotetaan hampurilaisvalikko*/
+.nav-checkbox, .hampurilainen {
+  display: none;
 }
 
-.nav a:hover,
-.nav a:focus-visible {
-    color: blueviolet;
+span {
+    color: rgb(214, 198, 223);
 }
-
 /***********************
 MAIN (kaikilla sivuilla)
 ************************/
@@ -424,4 +429,28 @@ Responsiivisuus asetukset
     table {
         overflow-x: scroll;
     }
+    .nav-checkbox{
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .hampurilainen{
+    display: block;
+    margin-left: auto;
+    padding: 6px 6px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .nav-main{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .nav-checkbox:checked ~.nav-main{
+    display: flex;
+  }
 }
