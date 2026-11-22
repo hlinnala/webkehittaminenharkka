@@ -80,8 +80,25 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
     grid-area: nav;
 }
 
-.nav-main a:hover,
-.nav-main a:focus-visible {
+.nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav a {
+    align-items: center;
+    color: rgb(214, 198, 223);
+    ;
+    /* rgb(99, 12, 94);*/
+    text-decoration: none;
+}
+
+.nav a:not(.logo):hover,
+.nav a:not(.logo):focus-visible {
     color: blueviolet;
 }
 
