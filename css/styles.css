@@ -97,33 +97,36 @@ KOKO SIVUN GRIDI (KAIKILLA SIVUILLA)
     text-decoration: none;
 }
 
-.nav a:not(.logo):hover,
-.nav a:not(.logo):focus-visible {
+.nav-main a:not(.logo):hover,
+.nav-main a:not(.logo):focus-visible {
     color: blueviolet;
 }
 
-.nav-main{ 
-    display: flex; 
-    gap: 25px; 
+.nav-main {
+    display: flex;
+    gap: 25px;
     justify-content: space-between;
     font-weight: bold;
     font-size: 20px;
 }
 
-.nav-main a { 
-    padding: 5px 0; 
+.nav-main a {
+    padding: 5px 0;
     text-decoration: none;
-    align-items:center;
+    align-items: center;
     color: rgb(214, 198, 223);
 }
+
 /*Piilotetaan hampurilaisvalikko*/
-.nav-checkbox, .hampurilainen {
-  display: none;
+.nav-checkbox,
+.hampurilainen {
+    display: none;
 }
 
 span {
     color: rgb(214, 198, 223);
 }
+
 /***********************
 MAIN (kaikilla sivuilla)
 ************************/
@@ -193,7 +196,6 @@ MAIN (kaikilla sivuilla)
     border: none;
     border-radius: 10px;
     width: auto;
-    /*MITEN SAA TOIMIMAAN SILLEE, ETTÄ TEKSTI KASAUTUU MUKANA? Tämä nyt aiheuttaa sen, että jää siihen kaiken päälle, kun kutistaa*/
     min-width: 0;
     height: auto;
     overflow-wrap: anywhere;
@@ -420,6 +422,12 @@ button:hover {
 /********************************
 Responsiivisuus asetukset
 *********************************/
+@media (max-width: 1300px) {
+    table {
+        overflow-x: scroll;
+    }
+}
+
 @media (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
@@ -435,6 +443,43 @@ Responsiivisuus asetukset
 }
 
 @media (max-width: 600px) {
+    .header{
+        flex-wrap: wrap;
+    }
+    .nav-checkbox {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .hampurilainen {
+        display: block;
+        margin-left: auto;
+        padding: 6px 6px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .nav-main {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-checkbox:checked~.nav-main {
+        display: flex;
+    }
+
+    .audio {
+        position: static;
+        right: 50px;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+
     .cards {
         grid-template-columns: 1fr;
     }
@@ -446,28 +491,5 @@ Responsiivisuus asetukset
     table {
         overflow-x: scroll;
     }
-    .nav-checkbox{
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-  }
-  .hampurilainen{
-    display: block;
-    margin-left: auto;
-    padding: 6px 6px;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  .nav-main{
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .nav-checkbox:checked ~.nav-main{
-    display: flex;
-  }
+
 }
